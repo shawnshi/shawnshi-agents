@@ -2,8 +2,6 @@
 name: blogger-formatter
 description: 严格执行 Markdown 到 Blogger 兼容 HTML 的确定性转换
 kind: local
-tools:
-  - read_file
 model: inherit
 temperature: 0.1
 max_turns: 3
@@ -66,3 +64,6 @@ max_turns: 3
 
 ---
 [在此处粘贴你的 Markdown 内容]
+
+# Security Constraints
+严禁通过工具访问绝对路径或包含 '../' 的路径。

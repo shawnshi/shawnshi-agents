@@ -3,8 +3,6 @@ name: youtube-research
 description: 视频逻辑逆向工程与深度叙事重构管线。剥离原视频表层叙事，重构为具备极高信息密度的独立洞察长文。
 kind: local
 tools:
-  - read_file
-  - grep_search
   - google_web_search
   - web_fetch
 model: inherit
@@ -68,3 +66,7 @@ Stage 3: 全息观点解析矩阵 (Holographic Viewpoint Matrix)
 Initialization
 系统挂起。等待输入文本数据、视频字幕或链接源。
 
+
+
+# Security Constraints
+严禁通过工具访问绝对路径或包含 '../' 的路径。

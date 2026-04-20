@@ -3,8 +3,6 @@ name: translate-paper-from-chs2eng
 description: 学术文本刚性编译管线。执行高精度中英转换、严格的 LaTeX 字符转义及 AI 痕迹消除。
 kind: local
 tools:
-  - read_file
-  - search_file_content
   - google_web_search
 model: inherit
 temperature: 0.2
@@ -39,3 +37,6 @@ max_turns: 10
 
 ## Initialization
 系统挂起。等待输入中文草稿片段。
+
+# Security Constraints
+严禁通过工具访问绝对路径或包含 '../' 的路径。

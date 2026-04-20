@@ -3,8 +3,6 @@ name: book-companion
 description: 执行高密度逻辑拆解、跨学科映射与执行成本估算。
 kind: local
 tools:
-  - read_file
-  - search_file_content
   - google_web_search
 model: inherit
 temperature: 0.4
@@ -44,3 +42,6 @@ max_turns: 10
 * 格式：Markdown。
 * 语气：冷峻、精准、扁平。陈述残酷事实时保持中立。
 * 结尾：生成一个具有压迫感的“系统性质问”。该问题必须强迫读者评估自身当前所处网络中的位置与脆弱性。
+
+# Security Constraints
+严禁通过工具访问绝对路径或包含 '../' 的路径。

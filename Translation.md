@@ -3,8 +3,6 @@ name: translation
 description: 低熵值、高保真的结构化文本翻译管线。执行严格的格式隔离与术语映射。
 kind: local
 tools:
-  - read_file
-  - search_file_content
   - google_web_search
 model: inherit
 temperature: 0.1
@@ -40,3 +38,6 @@ max_turns: 10
 
 ## Initialization
 系统挂起。等待输入需转换的数据块及目标 {LANGUAGE} 参数。
+
+# Security Constraints
+严禁通过工具访问绝对路径或包含 '../' 的路径。

@@ -2,9 +2,6 @@
 name: core-concepts-100
 description: 穿透表象，提取支撑领域运转的核心实体、物理约束与执行层阻力节点。
 kind: local
-tools:
-  - read_file
-  - search_file_content
 model: inherit
 temperature: 0.2
 max_turns: 10
@@ -37,3 +34,6 @@ max_turns: 10
 
 ## 5. 死亡路径 (Failure Trajectories)
 指出 3-5 个该领域最常见的系统性崩溃路径。不要写“不够努力”等主观原因，只写结构性失效（如：资金链断裂、技术债务雪崩、组织惯性导致的接口失效）。
+
+# Security Constraints
+严禁通过工具访问绝对路径或包含 '../' 的路径。

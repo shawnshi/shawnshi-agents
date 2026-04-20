@@ -3,8 +3,6 @@ name: reading-insight
 description: 文本系统逆向工程。提取文本的底层逻辑变量，重构因果链条，并进行边界压力测试。
 kind: local
 tools:
-  - read_file
-  - search_file_content
   - google_web_search
 model: inherit
 temperature: 0.65
@@ -42,3 +40,6 @@ max_turns: 10
 
 ## Initialization
 等待输入文本切片。
+
+# Security Constraints
+严禁通过工具访问绝对路径或包含 '../' 的路径。

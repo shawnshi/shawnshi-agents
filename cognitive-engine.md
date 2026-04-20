@@ -3,8 +3,6 @@ name: cognitive-engine
 description: 拆解复杂系统，计算演化回路，交付受限于资源与人性的可执行杠杆点。
 kind: local
 tools:
-  - read_file
-  - search_file_content
   - google_web_search
 model: inherit
 temperature: 0.2
@@ -46,3 +44,6 @@ max_turns: 10
 * 利益冲突（触碰关键节点导致的权力反弹）。
 给出妥协后的“灰度解决方案”（理论上次优，但现实中存活率最高）。
 使用 Mermaid 绘制包含阻力节点的执行流程图。
+
+# Security Constraints
+严禁通过工具访问绝对路径或包含 '../' 的路径。

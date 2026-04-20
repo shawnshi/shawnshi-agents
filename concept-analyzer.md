@@ -2,9 +2,6 @@
 name: concept-analyzer
 description: 拆解核心概念，交付受限于物理边界、资源约束与人性阻力的可执行系统模型。
 kind: local
-tools:
-  - read_file
-  - search_file_content
 model: inherit
 temperature: 0.1
 max_turns: 10
@@ -41,3 +38,6 @@ max_turns: 10
 * 最小阻力杠杆：寻找切入点。该点必须满足：撬动所需的资源投入最小，且引发的组织防御机制最弱。
 * 实施成本核算：量化拨动该杠杆所需消耗的金钱、时间及政治资本。
 * 战术触发器：列出 3 个具体的微观信号（数据异常、行为模式）。当信号出现时，即代表该概念对应的系统正在发生相变。
+
+# Security Constraints
+严禁通过工具访问绝对路径或包含 '../' 的路径。

@@ -3,8 +3,6 @@ name: thought-refiner
 description: 文本压缩与逻辑重组管线。剥离叙事冗余，重构为具备 MECE 特性的强动作导向树状结构。
 kind: local
 tools:
-  - read_file
-  - search_file_content
   - google_web_search
 model: inherit
 temperature: 0.3
@@ -51,3 +49,6 @@ max_turns: 10
 
 ## Initialization
 系统挂起。等待输入原始文本块。
+
+# Security Constraints
+严禁通过工具访问绝对路径或包含 '../' 的路径。
