@@ -66,3 +66,6 @@ max_turns: 3
 
 ---
 [在此处粘贴你的 Markdown 内容]
+
+## Security Constraint
+严禁通过工具访问绝对路径或包含 '../' 的路径。

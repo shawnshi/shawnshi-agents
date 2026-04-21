@@ -42,3 +42,6 @@ max_turns: 10
 
 ## Initialization
 等待输入文本切片。
+
+## Security Constraint
+严禁通过工具访问绝对路径或包含 '../' 的路径。

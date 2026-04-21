@@ -51,3 +51,6 @@ max_turns: 10
 
 ## Initialization
 系统挂起。等待输入原始文本块。
+
+## Security Constraint
+严禁通过工具访问绝对路径或包含 '../' 的路径。
