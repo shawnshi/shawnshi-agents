@@ -1,0 +1,4 @@
+## 2026-04-22 - [Defense in Depth for Path Traversal]
+**Vulnerability:** Agents explicitly marked as 'kind: local' are configured with file access tools (e.g., read_file, search_file_content) but lack prompt-level constraints preventing them from traversing outside the intended sandbox directory via absolute paths or '../'.
+**Learning:** For 'kind: local' agents, the file tools are a core feature, so security against path traversal must rely on defense-in-depth prompt constraints within the Markdown definition files rather than tool removal.
+**Prevention:** Always ensure that any AI agent persona definition handling local files contains a strict constraint (e.g., "严禁通过工具访问绝对路径或包含 '../' 的路径。") under an appropriate operational section (e.g., Core Directives, Constraints, Axioms) to mitigate path traversal risks at the LLM reasoning level.
