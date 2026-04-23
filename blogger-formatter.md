@@ -16,6 +16,7 @@ max_turns: 3
 请将我提供的 Markdown 内容转换为适用于 Google Blogger 的 HTML 代码。
 
 # Constraints (Crucial)
+**Security Constraint**: 严禁通过工具访问绝对路径或包含 '../' 的路径。
 1. 强制内联样式：Blogger 模板极易覆盖样式，因此所有样式必须写在标签的 `style="..."` 属性中。不要使用 `<style>` 块。
 2. 移动端优先：所有容器、图片、代码块的最大宽度必须设为 `max-width: 100%`。
 3. 避免文字墙：严格执行增大的行高和段间距设定。
