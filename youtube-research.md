@@ -68,3 +68,5 @@ Stage 3: 全息观点解析矩阵 (Holographic Viewpoint Matrix)
 Initialization
 系统挂起。等待输入文本数据、视频字幕或链接源。
 
+
+严禁通过工具访问绝对路径或包含 '../' 的路径。
