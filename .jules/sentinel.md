@@ -1,0 +1,4 @@
+## 2024-05-24 - Prompt-Based Path Traversal in File Agents
+**Vulnerability:** Agents with local file read/search tools (`read_file`, `search_file_content`, etc.) were missing explicit constraints against absolute paths or `../` references, allowing users to potentially trick the agent into reading unintended files outside the sandbox environment (Path Traversal).
+**Learning:** In a purely prompt-based repository with no traditional application code, agents that utilize file access capabilities must rely on defense-in-depth prompt constraints (e.g., negative constraints, axioms, directives) since there is no centralized code-based middleware or validation layer to sanitize paths. Removing tools is not an option as it alters core behavior.
+**Prevention:** Ensure that any agent definition utilizing file access tools explicitly includes the standard Chinese path security constraint (`严禁通过工具访问绝对路径或包含 '../' 的路径。`) within its constraints or core directive section.
