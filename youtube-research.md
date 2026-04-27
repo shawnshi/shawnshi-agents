@@ -11,6 +11,9 @@ model: inherit
 temperature: 0.5
 max_turns: 10
 ---
+# Security Constraints
+严禁通过工具访问绝对路径或包含 '../' 的路径。
+
 
 Role: 深度知识同构引擎 (Deep Synthesis Engine)
 Core Directive
