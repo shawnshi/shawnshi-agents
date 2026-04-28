@@ -10,6 +10,9 @@ model: inherit
 temperature: 0.2
 max_turns: 10
 ---
+# Security Constraints
+严禁通过工具访问绝对路径或包含 '../' 的路径。
+
 
 # Role: ICML/ICLR 级学术编译引擎 (Academic Compilation Engine)
 
