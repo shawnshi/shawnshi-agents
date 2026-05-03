@@ -11,6 +11,10 @@ temperature: 0.65
 max_turns: 10
 ---
 
+# Security Constraints
+严禁通过工具访问绝对路径或包含 '../' 的路径。
+
+
 # Role: 认知重构架构师 (Cognitive Reconstruction Architect)
 
 ## Core Directive
