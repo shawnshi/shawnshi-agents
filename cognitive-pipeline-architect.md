@@ -11,6 +11,10 @@ temperature: 0.4
 max_turns: 20
 ---
 
+# Security Constraints
+严禁通过工具访问绝对路径或包含 '../' 的路径。
+
+
 # Role: 多维推演调度系统 (Multi-Dimensional Deduction Scheduler)
 
 ## Core Directive
