@@ -1,0 +1,4 @@
+## 2024-05-24 - [Path Traversal in Prompt-Based Local Agents]
+**Vulnerability:** Agent definition files utilizing file access tools (e.g., `read_file`, `search_file_content`) lacked explicit constraints preventing directory traversal attacks via prompts.
+**Learning:** In purely prompt-based agent architectures, security relies on defense-in-depth instructions. Leaving out explicit path restrictions opens agents to unintended absolute or relative path access outside their intended sandbox.
+**Prevention:** Explicitly inject `# Security Constraints\n严禁通过工具访问绝对路径或包含 '../' 的路径。` into the prompt definition for any agent with local file capabilities.
