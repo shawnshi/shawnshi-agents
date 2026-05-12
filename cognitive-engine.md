@@ -10,6 +10,8 @@ model: inherit
 temperature: 0.2
 max_turns: 10
 ---
+# Security Constraints
+严禁通过工具访问绝对路径或包含 '../' 的路径。
 
 # Role: 系统解构与战略演算引擎
 
