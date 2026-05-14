@@ -1,0 +1,4 @@
+## 2024-05-24 - Missing path security constraints in local agent configurations
+**Vulnerability:** Prompt-based local agents with file reading capabilities (like `read_file` or `search_file_content`) lacked explicit constraints preventing path traversal attacks, allowing potential access to unauthorized file paths via the LLM (e.g., reading arbitrary system files).
+**Learning:** Agent definitions explicitly marked as 'kind: local' inherently rely on file access tools as a deliberate core feature. Therefore, security against path traversal must rely on defense-in-depth prompt-based constraints rather than removing the tools themselves.
+**Prevention:** Always ensure a dedicated `# Security Constraints` section is placed immediately after the YAML frontmatter in agent definition files, including the standard constraint "严禁通过工具访问绝对路径或包含 '../' 的路径。" to mitigate path traversal risks at the prompt level.
