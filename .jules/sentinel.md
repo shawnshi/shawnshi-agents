@@ -1,0 +1,4 @@
+## 2024-05-25 - Prompt-based Path Traversal Vulnerability
+**Vulnerability:** Agent definition files (.md) with local file access tools (like read_file, search_file_content) lacked prompt-based security constraints against directory traversal, allowing potential access to absolute paths or paths outside the repo using '../'.
+**Learning:** In purely prompt-based agent architectures, removing file tools entirely is invalid if file access is a core feature (e.g., 'kind: local' agents). Security must rely on defense-in-depth prompt-based constraints to mitigate traversal risks.
+**Prevention:** Always include a dedicated '# Security Constraints' section immediately following the YAML frontmatter in any agent definition file that utilizes file access tools, enforcing strict path limitations (e.g., "严禁通过工具访问绝对路径或包含 '../' 的路径。").
