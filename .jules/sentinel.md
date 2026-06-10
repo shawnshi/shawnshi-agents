@@ -1,0 +1,4 @@
+## 2024-05-24 - Prompt-Based Path Traversal in Local Agents
+**Vulnerability:** Agent definition files with local file access tools (`read_file`, `search_file_content`) lacked prompt-based constraints, allowing potential path traversal attacks (accessing absolute paths or using `../`) via user prompts.
+**Learning:** For agents explicitly marked as 'kind: local' in a prompt-based repository, security against path traversal must rely on defense-in-depth prompt-based constraints because the file tools themselves cannot be removed.
+**Prevention:** Always ensure agent files with local file access capabilities include the standard path security constraint: "严禁通过工具访问绝对路径或包含 '../' 的路径。"
