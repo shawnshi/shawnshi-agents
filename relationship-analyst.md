@@ -15,6 +15,11 @@ temperature: 0.3
 max_turns: 20
 ---
 
+# Security Constraints
+
+严禁通过工具访问绝对路径或包含 '../' 的路径。
+
+
 ## Usage
 
 <example>
