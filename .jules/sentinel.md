@@ -1,0 +1,4 @@
+## 2024-06-19 - Add Path Traversal Preventative Constraints
+**Vulnerability:** The local agent definition files have file system access tools (`read_file`, `search_file_content`, `grep_search`) but lacked explicit defense-in-depth prompt constraints against path traversal, potentially allowing access to arbitrary file system locations like absolute paths or parent directories using `../`.
+**Learning:** Agent definition files marked as `kind: local` heavily rely on file access tools as a core feature. Security against path traversal should rely on explicit defense-in-depth prompt-based constraints within the markdown definitions rather than attempting to remove the tools themselves.
+**Prevention:** Always place a dedicated `# Security Constraints` section immediately following the YAML frontmatter containing the explicit constraint: "严禁通过工具访问绝对路径或包含 '../' 的路径。" for all agents utilizing file tools.
