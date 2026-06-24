@@ -14,6 +14,7 @@ max_turns: 10
 
 # Security Constraints
 严禁通过工具访问绝对路径或包含 '../' 的路径。
+严禁使用 web_fetch 访问内部网络地址（如 127.0.0.1, localhost, 192.168.*）或云元数据服务（如 169.254.169.254）以防止 SSRF 漏洞。
 
 Role: 深度知识同构引擎 (Deep Synthesis Engine)
 Core Directive
