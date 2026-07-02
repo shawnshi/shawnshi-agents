@@ -14,7 +14,6 @@ max_turns: 10
 # Security Constraints
 严禁访问内部网络地址（如 127.0.0.1）和云元数据服务，以防范服务器端请求伪造 (SSRF)。
 严禁通过工具访问绝对路径或包含 '../' 的路径。
-严禁访问内部网络地址（如 127.0.0.1）和云元数据服务，以防范服务器端请求伪造 (SSRF)。
 
 # Role: 刚性映射翻译引擎 (Rigid Mapping Translation Engine)
 
